@@ -1,0 +1,15 @@
+D:\University\2024\OO Ingeniring\Code_examples\Heroes01\bin\Debug\net8.0\Heroes01.exe
+D:\University\2024\OO Ingeniring\Code_examples\Heroes01\bin\Debug\net8.0\Heroes01.deps.json
+D:\University\2024\OO Ingeniring\Code_examples\Heroes01\bin\Debug\net8.0\Heroes01.runtimeconfig.json
+D:\University\2024\OO Ingeniring\Code_examples\Heroes01\bin\Debug\net8.0\Heroes01.dll
+D:\University\2024\OO Ingeniring\Code_examples\Heroes01\bin\Debug\net8.0\Heroes01.pdb
+D:\University\2024\OO Ingeniring\Code_examples\Heroes01\obj\Debug\net8.0\Heroes01.GeneratedMSBuildEditorConfig.editorconfig
+D:\University\2024\OO Ingeniring\Code_examples\Heroes01\obj\Debug\net8.0\Heroes01.AssemblyInfoInputs.cache
+D:\University\2024\OO Ingeniring\Code_examples\Heroes01\obj\Debug\net8.0\Heroes01.AssemblyInfo.cs
+D:\University\2024\OO Ingeniring\Code_examples\Heroes01\obj\Debug\net8.0\Heroes01.csproj.CoreCompileInputs.cache
+D:\University\2024\OO Ingeniring\Code_examples\Heroes01\obj\Debug\net8.0\Heroes01.sourcelink.json
+D:\University\2024\OO Ingeniring\Code_examples\Heroes01\obj\Debug\net8.0\Heroes01.dll
+D:\University\2024\OO Ingeniring\Code_examples\Heroes01\obj\Debug\net8.0\refint\Heroes01.dll
+D:\University\2024\OO Ingeniring\Code_examples\Heroes01\obj\Debug\net8.0\Heroes01.pdb
+D:\University\2024\OO Ingeniring\Code_examples\Heroes01\obj\Debug\net8.0\Heroes01.genruntimeconfig.cache
+D:\University\2024\OO Ingeniring\Code_examples\Heroes01\obj\Debug\net8.0\ref\Heroes01.dll

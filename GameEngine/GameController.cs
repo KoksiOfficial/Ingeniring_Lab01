@@ -6,6 +6,7 @@ using Heroes01.AttackPatterns;
 using Heroes01.GameEntities;
 using Heroes01.KnightAttacks;
 using Heroes01.MageSpells;
+using Heroes01.Projectiles;
 
 namespace Heroes01.GameEngine
 {
@@ -20,13 +21,36 @@ namespace Heroes01.GameEngine
             if (GetHeroName() is string heroName1)
                 hero1!.name = heroName1;
             SetHeroAbilites(hero1!);
+            PickProjectile(hero1!);
 
             SetHeroClass(ref hero2, 2);
             if (GetHeroName() is string heroName2)
                 hero2!.name = heroName2;
             SetHeroAbilites(hero2!);
+            PickProjectile(hero2!);
 
             return (hero1, hero2);
+        }
+
+        private static void PickProjectile(Hero hero)
+        {
+            Console.WriteLine("\nKing of the near castle wants to provide you with additional medieval projectile!");
+            Console.WriteLine($"Please, {hero.name}! Choose the projectile:\n1 -> Catapult 2 -> Trebuchet");
+            Console.WriteLine("Each one has the same damage, which equals 10 points and cost no mana or fatigue.");
+            var answ = Console.ReadKey();
+
+            if (answ.KeyChar == '1')
+            {
+                hero.abilities.Insert(0, new Catapult());
+                return;
+            }
+            else if (answ.KeyChar == '2')
+            {
+                hero.abilities.Insert(0, new Trebuchet());
+                return;
+            }
+            else
+                PickProjectile(hero);
         }
 
         public static void DisplayCurrentStats(Hero hero)
@@ -50,13 +74,19 @@ namespace Heroes01.GameEngine
             var spell = answ.KeyChar;
             if (spell == '1')
             {
-                var result = atacker.abilities[0].CastAbility(atacker, defender);
-                if (result) atacker.abilities[0].PerformAnimation();
+                var result = atacker.abilities[1].CastAbility(atacker, defender);
+                if (result) atacker.abilities[1].PerformAnimation();
+                //cast projectile
+                atacker.abilities[0].CastAbility(atacker, defender);
+                atacker.abilities[0].PerformAnimation();
             }
             else if (spell == '2')
             {
-                var result = atacker.abilities[1].CastAbility(atacker, defender);
-                if (result) atacker.abilities[1].PerformAnimation();
+                var result = atacker.abilities[2].CastAbility(atacker, defender);
+                if (result) atacker.abilities[2].PerformAnimation();
+                //cast projectile
+                atacker.abilities[0].CastAbility(atacker, defender);
+                atacker.abilities[0].PerformAnimation();
             }
             else
             {
@@ -77,11 +107,11 @@ namespace Heroes01.GameEngine
         {
             if (hero is Mage)
             {
-                hero.abilities = new Ability[] { new FireBall(), new AvadaKedavra() };
+                hero.abilities = new List<Ability> { new FireBall(), new AvadaKedavra() };
             }
             else
             {
-                hero.abilities = new Ability[] { new MightySwing(), new ArtursOath() };
+                hero.abilities = new List<Ability> { new MightySwing(), new ArtursOath() };
             }
         }
 

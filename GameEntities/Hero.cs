@@ -13,6 +13,6 @@ namespace Heroes01.GameEntities
         public bool alive { get; set; } = true;
         public string name { get; set; } = "Unknown warrior";
 
-        public Ability[] abilities { get; set; } = null;
+        public List<Ability> abilities { get; set; } = null;
     }
 }
